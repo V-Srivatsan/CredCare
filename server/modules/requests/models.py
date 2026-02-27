@@ -8,6 +8,16 @@ class RequestStatus(str, Enum):
     COMPLETED = "COMPLETED"
     CANCELLED = "CANCELLED"
 
+    __ALLOWED_TRANSITIONS__ = {
+        PENDING: [ACCEPTED, CANCELLED],
+        ACCEPTED: [COMPLETED, PENDING],
+        COMPLETED: [],
+        CANCELLED: []
+    }
+
+    def can_transition_to(self, new_status):
+        return new_status in self.__ALLOWED_TRANSITIONS__.get(self, [])
+
 class Request(BaseModel):
     creator = fields.ForeignKeyField('user.User', on_delete=fields.SET_NULL, null=True, related_name='created_requests')
     acceptor = fields.ForeignKeyField('user.User', on_delete=fields.SET_NULL, null=True, related_name='accepted_requests')
