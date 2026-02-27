@@ -1,6 +1,6 @@
 # CredCare
 
-CredCare is a **community-driven help and rewards platform** designed specifically for gated communities and apartment complexes. It combines **local trust**, **reputation scoring**, and **blockchain-backed rewards** into one seamless experience.
+CredCare is a **community-driven help and rewards platform** designed specifically for gated communities and apartment complexes. It combines **local trust** and **reputation scoring** into one seamless experience.
 
 ---
 
@@ -65,22 +65,6 @@ Higher Cred Score = More trust + better visibility.
 
 ---
 
-### 5️⃣ Reward Mechanism
-
-* Helpers earn ETH-based token rewards
-* Optional tipping from requester
-* Transparent reward tracking
-* Blockchain-backed transaction record
-* Built-in wallet view
-
-This ensures:
-
-* Fair distribution
-* Tamper-proof records
-* Incentivized participation
-
----
-
 ## ⭐ Key Features
 
 ### 🔒 Community-Restricted Access
@@ -92,14 +76,6 @@ Only verified residents can:
 * Interact
 
 No outsiders.
-
----
-
-### 💬 In-App Messaging
-
-* Secure real-time chat
-* Task-related communication
-* Maintains conversation records
 
 ---
 
@@ -127,7 +103,6 @@ Users can see:
 
 * Complete task history
 * Ratings received & given
-* Blockchain reward logs
 
 ---
 
@@ -167,13 +142,3 @@ CredCare is:
 * A **trust economy layer** for your neighborhood
 * A **micro-service marketplace**
 * A **reward-based social infrastructure**
-
----
-
-## 🚀 Long-Term Vision
-
-* Cross-community reputation portability
-* DAO-based community governance
-* Local service integrations
-* Community token economies
-* AI-powered trust prediction
