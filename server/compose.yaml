@@ -1,0 +1,26 @@
+name: credcare
+services:
+  server:
+    image: python:3.12-alpine
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/app
+    working_dir: /app
+    command: ["/bin/sh", "-c", "pip install -r requirements.txt && fastapi dev main.py --host 0.0.0.0 --port 8000"]
+    environment:
+      - DB_URL=postgres://credcare:credcare@database:5432/credcare
+      - CACHE_URL=redis://cache:6379
+      - SECRET_KEY=your_secret_key_change_me
+      - ALGORITHM=HS256
+      - TORTOISE_ORM=lib.db.TORTOISE_ORM
+
+  database:
+    image: postgres:18-alpine
+    environment:
+      POSTGRES_USER: credcare
+      POSTGRES_PASSWORD: credcare
+      POSTGRES_DB: credcare
+
+  cache:
+    image: valkey/valkey:9-alpine
